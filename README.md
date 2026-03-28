@@ -21,15 +21,27 @@ The Google Full Stack is built on **five core pillars**:
 5. **Agentic IDE (Antigravity):** The next-gen CLI that automates coding tasks and stack management.
 
 ```mermaid
-graph TD
-    AG[Antigravity CLI] -->|Bootstraps| App(Google Full Stack App)
-    AG -->|Orchestrates| DevFlow[Agentic Dev Flow]
-    App -->|Angular UI| Frontend[Angular Frontend]
-    Frontend -->|Firebase SDK| Firebase[Firebase BaaS]
-    Frontend -->|HTTP API| CloudRun[Cloud Run API]
-    CloudRun -->|SDK| Gemini[Gemini 3.1 Pro AI]
-    CloudRun -->|Admin SDK| Firestore[(Firestore DB)]
-    Firebase -->|Realtime| Firestore
+graph LR
+    User[Developer] -- "Natural Language Intent" --> AG[Antigravity Agent]
+    
+    subgraph "Agentic Workflow (Antigravity)"
+    AG -- "Explore Context" --> FS[File System]
+    AG -- "Execute & Test" --> Terminal[Secure Terminal]
+    AG -- "Validation" --> Browser[Visual Browser]
+    Browser -- "Screenshots" --> AG
+    Terminal -- "Real-time Feedback" --> AG
+    end
+    
+    AG -- "Orchestrate" --> GFS[Google Full Stack Blueprint]
+    
+    subgraph "Google Full Stack (Target Architecture)"
+    GFS --> Angular[Angular Frontend]
+    GFS --> Firebase[Firebase BaaS]
+    GFS --> CloudRun[Cloud Run Compute]
+    CloudRun --> Gemini[Gemini 1.5 Pro AI]
+    end
+    
+    AG -- "CI/CD & Deploy" --> GCP[Google Cloud Platform]
 ```
 
 ---
