@@ -1,115 +1,117 @@
-<div class="layout-wrapper">
-  <!-- 🎨 Aura Marketplace Sidebar -->
-  <aside class="sidebar">
-    <div style="display: flex; align-items: center; gap: 1rem; color: white; margin-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1.5rem;">
-      <div style="width: 32px; height: 32px; background: linear-gradient(45deg, #a1c4fd, #c2e9fb); border-radius: 50%; box-shadow: 0 0 20px #a1c4fd;"></div>
-      <span style="font-weight: 800; font-size: 1.6rem; letter-spacing: -1px;">Aura</span>
+<div class="mcp-main-container">
+  <!-- 🛰️ HEADER: MASTER CONTROL BAR -->
+  <header class="mcp-header">
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <div style="width: 28px; height: 28px; background: #4285f4; border-radius: 6px; display: flex; align-items: center; justify-content: center; transform: rotate(45deg);">
+        <div style="width: 14px; height: 14px; background: white; border-radius: 2px;"></div>
+      </div>
+      <span style="font-weight: 800; font-size: 1.4rem; letter-spacing: -1.2px;">MCP-MASTER</span>
     </div>
+    
+    <div style="display: flex; gap: 2rem; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 0.5rem; background: rgba(255, 255, 255, 0.05); padding: 0.6rem 1.2rem; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+        <div class="status-indicator status-online"></div>
+        <span style="font-size: 0.8rem; font-weight: 600; color: #a0a0a0;">PROJECT: google-stack-alpha</span>
+      </div>
+      <div style="width: 32px; height: 32px; background: #ea4335; border-radius: 50%; box-shadow: 0 0 15px #ea4335;"></div>
+    </div>
+  </header>
 
-    <div class="intent-status">Manifest of Intent</div>
-    <div class="service-card" style="padding: 1.5rem; margin-bottom: 1.5rem;">
-      <div style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem; color: #a1c4fd;">@CONCEPTS</div>
-      <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">Vibe: Ethereal Minimalism</div>
-      <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">Scale: Global Edge</div>
-    </div>
-
-    <div class="intent-status">System Orchestrators</div>
-    <div class="stitch-item">
-      <span class="stitch-title">Stitch UI-Agent</span>
-      <span class="stitch-desc">Generating Design DNA...</span>
-    </div>
-    <div class="stitch-item">
-      <span class="stitch-title">Antigravity Logic-Agent</span>
-      <span class="stitch-desc">Weaving AlloyDB hooks.</span>
-    </div>
-    <div class="stitch-item">
-      <span class="stitch-title">Vertex AI-Agent</span>
-      <span class="stitch-desc">Vector Indexing sub-50ms.</span>
-    </div>
-
-    <div style="margin-top: auto;">
-      <div style="padding: 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);">
-        <div style="font-size: 0.8rem; font-weight: 600; color: #a1c4fd; margin-bottom: 0.5rem;">Pulse Check</div>
-        <div style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.75rem; color: rgba(255,255,255,0.6);">
-          <div class="pulse-map-dot"></div>
-          <span>Self-Healing Engine [Online]</span>
+  <!-- 🖥️ LEFT: GOOGLE CLOUD CONSOLE -->
+  <aside class="mcp-panel-left">
+    <h3 class="section-title">Cloud Infrastructure</h3>
+    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+      <div class="mcp-card" style="padding: 1rem;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+          <span style="font-size: 0.85rem; font-weight: 600;">Compute Engine</span>
+          <span style="font-size: 0.7rem; color: #4ade80;">Online</span>
         </div>
+        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">4/4 Instances Running</div>
+      </div>
+      <div class="mcp-card" style="padding: 1rem;">
+        <div style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Cloud Storage</div>
+        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">12.4 TB Global Edge Sync</div>
+      </div>
+      <div class="mcp-card" style="padding: 1rem;">
+        <div style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">Vertex AI Indexes</div>
+        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4); display: flex; align-items: center; gap: 0.5rem;">
+          <div class="status-indicator status-syncing" style="width: 6px; height: 6px;"></div>
+          Indexing L-Space...
+        </div>
+      </div>
+      <div class="mcp-card" style="padding: 1rem;">
+        <div style="font-size: 0.85rem; font-weight: 600; margin-bottom: 0.5rem;">IAM & Admin</div>
+        <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">Root Permissions Active</div>
       </div>
     </div>
   </aside>
 
-  <!-- 🏙️ Aura Workbench -->
-  <main class="main-content">
-    <div class="nav-bar">
-      <div style="display: flex; align-items: center; gap: 1rem;">
-        <span style="font-weight: 300; color: rgba(255,255,255,0.25);">Aura / Marketplace /</span>
-        <span style="font-weight: 600; letter-spacing: -0.5px;">Dashboard</span>
-      </div>
-      <div style="display: flex; gap: 2rem; font-size: 0.9rem; color: rgba(255,255,255,0.6); font-weight: 400;">
-        <span>Manifest v1</span>
-        <span>Pulse Map</span>
-        <span>Infrastructure</span>
-      </div>
+  <!-- ⌨️ CENTER: COMMAND PORTAL -->
+  <main class="mcp-content-center">
+    <div style="text-align: center; margin-bottom: 2rem;">
+      <h1 class="title-mcp">Universal Portal</h1>
+      <p style="font-size: 1.1rem; color: rgba(255,255,255,0.4); font-weight: 300;">One command to rule the entire Cloud Stack.</p>
     </div>
 
-    <div class="hero-section">
-      <h1 class="title-gradient">Aura Marketplace</h1>
-      <p class="subtitle">
-        Intent-Driven Digital Asset Exchange. Built with Antigravity Mode 2027 Syntax.
-      </p>
-      <div style="display: flex; justify-content: center; gap: 1.5rem; margin-top: 2rem;">
-        <button class="btn-ethereal" (click)="triggerLiftOff()" style="background: white; color: black; box-shadow: 0 0 30px rgba(255,255,255,0.3);">🚀 Executive Lift-Off</button>
-        <button class="btn-ethereal" (click)="generateAI()">Synthesize Asset</button>
-      </div>
+    <div class="command-bar-wrapper">
+      <input type="text" class="command-input" placeholder="Deploy Aura v2 with 10% more blur..." (keyup.enter)="executeMasterCommand($any($event.target).value); $any($event.target).value=''">
     </div>
 
-    <div class="services-grid">
-      <!-- AlloyDB Card -->
-      <div class="service-card">
-        <div style="font-size: 0.7rem; text-transform: uppercase; color: #a1c4fd;">@STEWARDSHIP</div>
-        <div class="card-title">AlloyDB Transactional Layer</div>
-        <p class="card-desc">High-frequency swap logic with 99.999% consistency via Gemini Orchestrator.</p>
-        <button class="btn-ethereal" (click)="callService('storage/list')">Scan Blocks</button>
-        <div class="response-box">{{ results['storage'] | json }}</div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+      <div class="mcp-card">
+        <h3 class="section-title">Intent Analysis</h3>
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div *ngFor="let intent of intents" style="border-left: 2px solid #4285f4; padding-left: 1rem;">
+             <div style="font-size: 0.85rem; font-weight: 600; color: #4285f4;">{{ intent.title }}</div>
+             <div style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">{{ intent.desc }}</div>
+          </div>
+        </div>
       </div>
-
-      <!-- Vertex Card -->
-      <div class="service-card">
-        <div style="font-size: 0.7rem; text-transform: uppercase; color: #a1c4fd;">@STEWARDSHIP</div>
-        <div class="card-title">Vertex AI Vector Search</div>
-        <p class="card-desc">Sub-50ms fuzzy asset matching using latent space multidimensional embeddings.</p>
-        <button class="btn-ethereal" (click)="analyzeVision()">Search Index</button>
-        <div class="response-box">{{ results['vision'] | json }}</div>
-      </div>
-
-      <!-- Stitch Card -->
-      <div class="service-card">
-        <div style="font-size: 0.7rem; text-transform: uppercase; color: #a1c4fd;">@AESTHETICS</div>
-        <div class="card-title">Dynamic Design DNA</div>
-        <p class="card-desc">Extracting lighting, textures, and mood from your 'Ethereal' photo album.</p>
-        <button class="btn-ethereal" (click)="translateText()">Refresh DNA</button>
-        <div class="response-box">{{ results['translate'] | json }}</div>
+      <div class="mcp-card">
+        <h3 class="section-title">Result Stream</h3>
+        <div class="code-block" style="height: 150px; overflow-y: auto;">
+          {{ masterResult | json }}
+        </div>
       </div>
     </div>
   </main>
 
-  <!-- 🤖 2027 Antigravity Console -->
-  <div class="antigravity-console">
-    <div style="padding: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; align-items: center;">
-      <div style="display: flex; align-items: center; gap: 0.75rem;">
-        <div class="pulse-map-dot" style="background: #a1c4fd; box-shadow: 0 0 15px #a1c4fd;"></div>
-        <span style="font-weight: 800; font-size: 0.8rem; letter-spacing: 1px; color: white; text-transform: uppercase;">Orchestration Pulse</span>
+  <!-- 🧠 RIGHT: ANTIGRAVITY EDITOR -->
+  <aside class="mcp-panel-right">
+    <h3 class="section-title">Antigravity SDK</h3>
+    <div class="mcp-card" style="flex: 1; display: flex; flex-direction: column; gap: 1rem;">
+      <div style="font-size: 0.75rem; text-transform: uppercase; color: #ea4335;">Runtime Brain</div>
+      <div style="flex: 1; background: #000; border-radius: 12px; padding: 1.5rem; font-family: 'Fira Code', monospace; overflow-y: auto; font-size: 0.85rem;">
+        <span style="color: #c678dd;">export class</span> <span style="color: #61afef;">Orchestrator</span> &#123;<br>
+        &nbsp;&nbsp;<span style="color: #98c379;">// Intent Processing</span><br>
+        &nbsp;&nbsp;<span style="color: #e06c75;">async</span> <span style="color: #61afef;">execute</span>(intent) &#123;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #c678dd;">const</span> aura = <span style="color: #e06c75;">await</span> <span style="color: #61afef;">Stitch</span>.weave(intent);<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #c678dd;">return</span> <span style="color: #e06c75;">await</span> <span style="color: #61afef;">GCP</span>.deploy(aura);<br>
+        &nbsp;&nbsp;&#125;<br>
+        &#125;
       </div>
-      <div style="font-size: 0.65rem; color: rgba(255,255,255,0.25);">TARGET: FIREBASE EDGE</div>
+      <button class="btn-mcp" style="background: #4285f4; border: none; color: white;">Compile Logic</button>
     </div>
-    <div class="console-body">
-      <div class="agent-log" style="color: #a1c4fd;">>> AWAITING LIFT-OFF COMMAND...</div>
-      <div *ngFor="let log of agentLogs" class="agent-log" [ngClass]="log.type">
-        >> {{ log.message }}
+  </aside>
+
+  <!-- 🖼️ BOTTOM: BROWSER PREVIEW -->
+  <section class="mcp-panel-bottom">
+    <div style="display: flex; gap: 2rem; height: 100%;">
+      <div class="mcp-card" style="flex: 2; display: flex; flex-direction: column; gap: 1rem;">
+        <h3 class="section-title">Master Visual Preview</h3>
+        <div style="flex: 1; background: #fff; border-radius: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+          <div style="width: 100px; height: 100px; background: linear-gradient(45deg, #4285f4, #ea4335); border-radius: 50%; animation: pulse 4s infinite;"></div>
+        </div>
       </div>
-      <div style="margin-top: auto;">
-        <input type="text" placeholder="Declare your intent..." style="width: 100%; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); padding: 1rem; border-radius: 12px; color: white; outline: none; font-size: 0.8rem;" (keyup.enter)="sendAgentCommand($any($event.target).value); $any($event.target).value=''">
+      <div class="mcp-card" style="flex: 1;">
+        <h3 class="section-title">System Logs</h3>
+        <div style="font-family: 'Fira Code', monospace; font-size: 0.75rem; color: #a0a0a0;">
+          [10:42:01] MCP: Bootstrapping Cloud Project...<br>
+          [10:42:05] Antigravity: Agent active in sandbox.<br>
+          [10:42:09] Stitch: Syncing UI Design DNA...<br>
+          [10:42:12] Vertex: Indexing 10M vectors...
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
