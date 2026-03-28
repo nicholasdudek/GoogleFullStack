@@ -1,0 +1,26 @@
+# Dependencies
+node_modules/
+**/node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+.angular/
+.firebase/
+
+# Environment variables
+.env
+*.env
+.env.local
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Agent/Tool specific
+.agent/
+.gemini/
+.antigravity/
